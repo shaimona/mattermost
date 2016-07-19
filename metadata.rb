@@ -1,0 +1,12 @@
+name 'mattermost'
+maintainer 'Shaimon A'
+maintainer_email 'shaimon@gmail.com'
+license 'all_rights'
+description 'Installs/Configures mattermost chat server'
+long_description 'Installs/Configures mattermost chat server.. All in one server'
+version '0.1.0'
+
+depends 'postgresql'
+depends 'database'
+depends 'ark'
+depends 'yum'

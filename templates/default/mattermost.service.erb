@@ -1,0 +1,13 @@
+[Unit]
+Description=Mattermost
+After=syslog.target network.target postgresql.service
+
+[Service]
+Type=simple
+WorkingDirectory=<%= node['mattermost']['install_dir'] %>/mattermost/bin
+User=<%= node['mattermost']['user'] %>
+ExecStart=<%= node['mattermost']['install_dir'] %>/mattermost/bin/platform
+PIDFile=/var/spool/mattermost/pid/master.pid
+
+[Install]
+WantedBy=multi-user.target
